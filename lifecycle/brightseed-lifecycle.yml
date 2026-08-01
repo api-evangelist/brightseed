@@ -1,0 +1,29 @@
+generated: '2026-07-31'
+method: derived
+source: https://www.brightseedbio.com/wp-json/wp/v2 route metadata + live probes on 2026-07-31
+versioning:
+  scheme: uri-path-namespace
+  current: wp/v2
+  namespaces_advertised:
+  - wp/v2
+  - oembed/1.0
+  - wp-site-health/v1
+  - wp-block-editor/v1
+  docs: https://developer.wordpress.org/rest-api/
+  note: Version is the WordPress core REST namespace, set by the CMS release, not by Brightseed. Brightseed publishes
+    no versioning policy of its own.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  note: No deprecation policy and no RFC 8594 Sunset/Deprecation headers observed.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+changelog: null
+support:
+  contact_form: https://www.brightseedbio.com/contact-us/
+deprecated_operations: []
+notes: No status page, no deprecation policy, no SLA and no changelog were found for Brightseed, so no StatusPage
+  or Deprecation pointer is emitted. Recorded as observed absence.

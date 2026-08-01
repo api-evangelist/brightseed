@@ -1,0 +1,62 @@
+# Brightseed
+
+> Brightseed is a bioactives and AI company (founded 2017, San Francisco CA / Durham NC) whose Forager
+> AI platform maps compounds in plants to human biological pathways and health benefits, drawing on a
+> proprietary dataset of 21 million bioactive compounds across 23 health areas. Hummingbird layers an
+> agentic AI system on top of Forager to carry partners from discovery through development. Brightseed
+> publishes NO product or developer API for Forager or Hummingbird — those are enterprise engagements
+> arranged through a contact form. The only machine-readable surface Brightseed operates is the
+> WordPress REST API (wp/v2) behind its corporate site.
+
+## APIs
+
+- [Brightseed WordPress REST API (wp/v2)](https://www.brightseedbio.com/wp-json/): The corporate site
+  content API. 11 resources and 84 operations. Anonymous read access to posts, pages, media,
+  categories, tags, users, comments, search, taxonomies, types and statuses; writes require a
+  WordPress application password (HTTP Basic).
+
+## Specs
+
+- [posts API](openapi/brightseed-posts-api-openapi.yml): OpenAPI 3.1.0, 13 operations
+- [pages API](openapi/brightseed-pages-api-openapi.yml): OpenAPI 3.1.0, 13 operations
+- [media API](openapi/brightseed-media-api-openapi.yml): OpenAPI 3.1.0, 9 operations
+- [users API](openapi/brightseed-users-api-openapi.yml): OpenAPI 3.1.0, 21 operations
+- [categories API](openapi/brightseed-categories-api-openapi.yml): OpenAPI 3.1.0, 7 operations
+- [tags API](openapi/brightseed-tags-api-openapi.yml): OpenAPI 3.1.0, 7 operations
+- [comments API](openapi/brightseed-comments-api-openapi.yml): OpenAPI 3.1.0, 7 operations
+- [search API](openapi/brightseed-search-api-openapi.yml): OpenAPI 3.1.0, 1 operation
+- [taxonomies API](openapi/brightseed-taxonomies-api-openapi.yml): OpenAPI 3.1.0, 2 operations
+- [types API](openapi/brightseed-types-api-openapi.yml): OpenAPI 3.1.0, 2 operations
+- [statuses API](openapi/brightseed-statuses-api-openapi.yml): OpenAPI 3.1.0, 2 operations
+
+## Artifacts
+
+- [Authentication](authentication/brightseed-authentication.yml): HTTP Basic via WordPress application passwords
+- [Conventions](conventions/brightseed-conventions.yml): pagination, sparse fields, embedding, error envelope
+- [Error catalog](errors/brightseed-problem-types.yml): WordPress error envelope {code,message,data.status}
+- [Data model](data-model/brightseed-data-model.yml): entity graph for the content API
+- [Lifecycle](lifecycle/brightseed-lifecycle.yml): wp/v2 namespace versioning; no status page or deprecation policy
+- [Conformance](conformance/brightseed-conformance.yml): standards asserted and denied, with evidence
+- [Well-known](well-known/brightseed-well-known.yml): no /.well-known/ documents published
+- [Domain security](security/brightseed-domain-security.yml): TLS 1.3, HSTS preload, SPF, DMARC p=reject, no DNSSEC/CAA
+- [Agentic access](agentic-access/brightseed-agentic-access.yml): recommended x-agentic-access contracts for 84 operations
+- [MCP (candidate)](mcp/brightseed-mcp.yml): derived candidate tool surface; Brightseed operates no MCP server
+- [Agent skills](skills/_index.yml): packaged operating instructions for the content API
+
+## Docs
+
+- [Brightseed](https://www.brightseedbio.com/)
+- [Forager AI platform](https://www.brightseedbio.com/forager-ai/)
+- [Market-ready ingredients](https://www.brightseedbio.com/market-ready-ingredients/)
+- [Knowledge base](https://resources.brightseedbio.com/knowledgebase)
+- [Newsroom](https://www.brightseedbio.com/newsroom/)
+- [Patents](https://www.brightseedbio.com/patents/)
+- [Contact](https://www.brightseedbio.com/contact-us/)
+- [WordPress REST API reference](https://developer.wordpress.org/rest-api/reference/)
+
+## Optional
+
+- [Careers](https://www.brightseedbio.com/careers/)
+- [Team](https://www.brightseedbio.com/team/)
+- [Privacy policy](https://www.brightseedbio.com/privacy-policy/)
+- [Terms of use](https://www.brightseedbio.com/terms-of-use/)

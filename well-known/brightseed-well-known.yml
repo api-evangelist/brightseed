@@ -1,0 +1,26 @@
+generated: '2026-07-31'
+method: probed
+source: live GET of the /.well-known/ discovery surface on every apis.yml + OpenAPI servers[] host
+host: https://www.brightseedbio.com
+hosts_probed:
+- https://www.brightseedbio.com
+- https://resources.brightseedbio.com
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+notes: Brightseed publishes no /.well-known/ discovery documents on either host. Every path above returned 404 on
+  2026-07-31. The apex brightseedbio.com does not resolve; www is the only web host. No security.txt (RFC 9116),
+  no OIDC/OAuth discovery, no API catalog (RFC 9727), no A2A agent card. Recorded as observed absence, not as a
+  gap to fill.

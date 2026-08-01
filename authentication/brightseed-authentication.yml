@@ -1,0 +1,27 @@
+generated: '2026-07-31'
+method: derived
+source: openapi/brightseed-categories-api-openapi.yml, openapi/brightseed-comments-api-openapi.yml,
+  openapi/brightseed-media-api-openapi.yml, openapi/brightseed-pages-api-openapi.yml, openapi/brightseed-posts-api-openapi.yml,
+  openapi/brightseed-search-api-openapi.yml, openapi/brightseed-statuses-api-openapi.yml, openapi/brightseed-tags-api-openapi.yml,
+  openapi/brightseed-taxonomies-api-openapi.yml, openapi/brightseed-types-api-openapi.yml, openapi/brightseed-users-api-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: applicationPassword
+  type: http
+  scheme: basic
+  description: WordPress application passwords. Authorize at https://www.brightseedbio.com/wp-admin/authorize-application.php
+    (advertised in the /wp-json/ discovery document).
+  sources:
+  - openapi/brightseed-categories-api-openapi.yml
+  - openapi/brightseed-comments-api-openapi.yml
+  - openapi/brightseed-media-api-openapi.yml
+  - openapi/brightseed-pages-api-openapi.yml
+  - openapi/brightseed-posts-api-openapi.yml
+  - openapi/brightseed-search-api-openapi.yml
+  - openapi/brightseed-statuses-api-openapi.yml
+  - openapi/brightseed-tags-api-openapi.yml
+  - openapi/brightseed-taxonomies-api-openapi.yml
+  - openapi/brightseed-types-api-openapi.yml
+  - openapi/brightseed-users-api-openapi.yml

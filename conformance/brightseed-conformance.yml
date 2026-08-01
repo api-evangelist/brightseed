@@ -1,0 +1,43 @@
+generated: '2026-07-31'
+method: derived
+source: openapi/ (11 specs derived from the live wp/v2 route metadata) + live response headers
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: 11 OpenAPI 3.1.0 documents in openapi/, derived from the server's own route metadata
+- id: http-basic-auth-rfc7617
+  conforms: true
+  evidence: WordPress application passwords are HTTP Basic credentials (securityScheme http/basic)
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securityScheme in any spec; /.well-known/oauth-authorization-server returns 404
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use the WordPress envelope {code,message,data.status} as application/json, not application/problem+json
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404
+- id: rfc9727-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returns 404
+- id: rfc8288-web-linking
+  conforms: true
+  evidence: 'collection responses emit Link: <...>; rel="next" for pagination'
+- id: cors
+  conforms: true
+  evidence: 'Access-Control-Expose-Headers: X-WP-Total, X-WP-TotalPages, Link on live responses'
+- id: hsts-rfc6797
+  conforms: true
+  evidence: 'strict-transport-security: max-age=63072000; includeSubDomains; preload'
+- id: idempotency-key
+  conforms: false
+  evidence: no idempotency key header or parameter in any operation; WordPress REST has no idempotency contract
+- id: asyncapi
+  conforms: false
+  evidence: no event, streaming or webhook surface published
+compliance_program: null
+notes: No published compliance program, certification (SOC 2 / ISO 27001 / HIPAA / GDPR attestation page) or trust
+  center was found for Brightseed, so no Compliance or TrustCenter pointer is emitted.

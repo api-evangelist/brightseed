@@ -1,0 +1,28 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Brightseed comments API
+  version: 1.0.0
+extends: openapi/brightseed-comments-api-openapi.yml
+x-generated: '2026-07-31'
+x-method: generated
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: brightseed
+    x-apievangelist-surface: wordpress-rest-api
+    x-apievangelist-derived-from: https://www.brightseedbio.com/wp-json/wp/v2
+    x-apievangelist-verified: '2026-07-31'
+    x-apievangelist-note: Brightseed publishes no product API for Forager or Hummingbird; this is the corporate
+      site content API.
+- target: $.info
+  update:
+    x-apievangelist-artifacts:
+      authentication: authentication/brightseed-authentication.yml
+      conventions: conventions/brightseed-conventions.yml
+      errors: errors/brightseed-problem-types.yml
+      lifecycle: lifecycle/brightseed-lifecycle.yml
+      data_model: data-model/brightseed-data-model.yml
+- target: $.servers[0]
+  update:
+    x-verified: '2026-07-31'
+    x-anonymous-read: true

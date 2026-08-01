@@ -1,0 +1,59 @@
+generated: '2026-07-31'
+method: derived
+source: openapi/ 4xx responses (components.schemas.Error) + live WordPress REST behaviour
+format: wordpress-rest-error
+note: Not RFC 9457. WordPress returns application/json with the envelope {code, message, data:{status}}; `code`
+  is the machine-readable identifier.
+envelope:
+  media_type: application/json
+  fields:
+  - field: code
+    description: Machine-readable error code, e.g. rest_forbidden.
+  - field: message
+    description: Human-readable error message.
+  - field: data.status
+    description: HTTP status code, repeated in the body.
+problems:
+- status: 400
+  code: rest_invalid_param
+  title: Invalid parameter
+  remediation: Check parameter names, types and enum values against the operation's parameters.
+  source: openapi/brightseed-posts-api-openapi.yml#listWpV2Posts
+- status: 401
+  code: rest_not_logged_in
+  title: Authentication required
+  remediation: Send HTTP Basic credentials from a WordPress application password.
+  source: openapi/brightseed-posts-api-openapi.yml#createWpV2Posts
+- status: 403
+  code: rest_forbidden
+  title: Forbidden
+  remediation: The authenticated user lacks the capability for this operation.
+  source: openapi/brightseed-users-api-openapi.yml#listWpV2Users
+- status: 403
+  code: rest_cannot_view
+  title: Not allowed to view this resource
+  remediation: Anonymous callers cannot use context=edit; request context=view or authenticate.
+  source: openapi/brightseed-pages-api-openapi.yml#getWpV2PagesById
+- status: 404
+  code: rest_no_route
+  title: No route matched the URL and request method
+  remediation: Verify the namespace/route against the discovery document at https://www.brightseedbio.com/wp-json/wp/v2.
+  source: live probe
+- status: 404
+  code: rest_post_invalid_id
+  title: Invalid post ID
+  remediation: The requested resource does not exist or is not published.
+  source: openapi/brightseed-posts-api-openapi.yml#getWpV2PostsById
+observed:
+- path: /wp/v2/settings
+  status: 401
+  verified: '2026-07-31'
+- path: /wp/v2/themes
+  status: 401
+  verified: '2026-07-31'
+- path: /wp/v2/plugins
+  status: 401
+  verified: '2026-07-31'
+- path: /wp/v2/menu-items
+  status: 401
+  verified: '2026-07-31'

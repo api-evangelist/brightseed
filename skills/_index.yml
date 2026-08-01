@@ -1,0 +1,23 @@
+generated: '2026-07-31'
+method: generated
+source: openapi/ (operationIds verified against the specs)
+skills:
+- file: brightseed-browse-site-content.md
+  name: Browse Brightseed site content
+  api: openapi/brightseed-posts-api-openapi.yml
+  operations:
+  - listWpV2Posts
+  - getWpV2PostsById
+  - listWpV2Pages
+  - getWpV2PagesById
+  - listWpV2Categories
+  - listWpV2Tags
+  - listWpV2Media
+- file: brightseed-search-site-content.md
+  name: Search Brightseed site content
+  api: openapi/brightseed-search-api-openapi.yml
+  operations:
+  - listWpV2Search
+  - getWpV2PostsById
+  - getWpV2PagesById
+  - listWpV2Posts

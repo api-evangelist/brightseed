@@ -1,0 +1,55 @@
+generated: '2026-07-31'
+method: derived
+status: candidate
+source: openapi/ (11 specs derived from https://www.brightseedbio.com/wp-json/wp/v2)
+searched:
+  date: '2026-07-31'
+  result: none
+  note: No official or community MCP server for Brightseed was found in the docs, on the Brightseed GitHub org (github.com/Brightseed,
+    0 public repositories), or in the public MCP registries. The tools below are a CANDIDATE surface derived from
+    the anonymous read operations of the live WordPress REST API — Brightseed does not operate this server.
+server:
+  name: brightseed
+  transport: http
+  url: null
+tools:
+- name: list_posts
+  description: List Brightseed newsroom and knowledge-base posts.
+  source_operation: openapi/brightseed-posts-api-openapi.yml#listWpV2Posts
+  auth: anonymous
+- name: get_post
+  description: Fetch a single post by id.
+  source_operation: openapi/brightseed-posts-api-openapi.yml#getWpV2PostsById
+  auth: anonymous
+- name: list_pages
+  description: List Brightseed site pages (products, platform, team, careers).
+  source_operation: openapi/brightseed-pages-api-openapi.yml#listWpV2Pages
+  auth: anonymous
+- name: get_page
+  description: Fetch a single page by id.
+  source_operation: openapi/brightseed-pages-api-openapi.yml#getWpV2PagesById
+  auth: anonymous
+- name: search_site
+  description: Search across Brightseed posts and pages.
+  source_operation: openapi/brightseed-search-api-openapi.yml#listWpV2Search
+  auth: anonymous
+- name: list_categories
+  description: List content categories.
+  source_operation: openapi/brightseed-categories-api-openapi.yml#listWpV2Categories
+  auth: anonymous
+- name: list_tags
+  description: List content tags.
+  source_operation: openapi/brightseed-tags-api-openapi.yml#listWpV2Tags
+  auth: anonymous
+- name: list_media
+  description: List media items (images, documents).
+  source_operation: openapi/brightseed-media-api-openapi.yml#listWpV2Media
+  auth: anonymous
+- name: list_comments
+  description: List comments.
+  source_operation: openapi/brightseed-comments-api-openapi.yml#listWpV2Comments
+  auth: anonymous
+- name: list_authors
+  description: List published site authors.
+  source_operation: openapi/brightseed-users-api-openapi.yml#listWpV2Users
+  auth: anonymous

@@ -1,0 +1,114 @@
+generated: '2026-07-31'
+method: derived
+source: openapi/ (derived from https://www.brightseedbio.com/wp-json/wp/v2) + live response headers captured 2026-07-31
+authentication:
+  style: http-basic
+  detail: WordPress application passwords sent as HTTP Basic credentials over TLS.
+  anonymous_read: true
+  anonymous_verified:
+  - posts
+  - pages
+  - media
+  - categories
+  - tags
+  - users
+  - comments
+  - search
+  - taxonomies
+  - types
+  - statuses
+  authenticated_only:
+  - settings
+  - themes
+  - plugins
+  - menu-items
+  artifact: authentication/brightseed-authentication.yml
+idempotency:
+  supported: false
+  header: null
+  note: 'The WordPress REST API publishes no idempotency contract: there is no Idempotency-Key header or parameter
+    on any operation. PUT/PATCH are naturally idempotent by HTTP semantics; POST creates are not. No Idempotency
+    pointer is emitted for this provider.'
+pagination:
+  style: page-number
+  params:
+  - name: page
+    default: 1
+    description: Current page of the collection.
+  - name: per_page
+    default: 10
+    max: 100
+    description: Maximum number of items returned in the result set.
+  - name: offset
+    description: Offset the result set by a specific number of items.
+  response_headers:
+  - header: X-WP-Total
+    description: Total items in the collection.
+    observed_example: 188 for /wp/v2/posts
+  - header: X-WP-TotalPages
+    description: Total pages at the requested per_page.
+    observed_example: 94 at per_page=2
+  - header: Link
+    description: RFC 8288 rel="next" / rel="prev" page links.
+  verified: '2026-07-31'
+sparse_fields:
+  supported: true
+  param: _fields
+  description: Comma-separated list limiting the fields returned per object.
+embedding:
+  supported: true
+  param: _embed
+  description: Embeds linked resources (author, featured media, terms) via the _links map.
+hypermedia:
+  style: wordpress _links
+  description: Every object carries a _links map with self/collection/about/author/replies rels.
+filtering_sorting:
+  params:
+  - search
+  - include
+  - exclude
+  - order
+  - orderby
+  - slug
+  - status
+  - after
+  - before
+  - author
+  - categories
+  - tags
+metadata:
+  field: meta
+  description: Registered post/term meta fields.
+request_tracing:
+  request_id_header: null
+  note: No request-id or correlation header observed on live responses.
+versioning:
+  scheme: uri-path-namespace
+  current: wp/v2
+  artifact: lifecycle/brightseed-lifecycle.yml
+error_envelope:
+  media_type: application/json
+  shape: '{code, message, data:{status}}'
+  artifact: errors/brightseed-problem-types.yml
+rate_limiting:
+  signalled: false
+  headers: []
+  note: No RateLimit / X-RateLimit headers observed on live responses; the site is served through nginx with no
+    published quota. Absence recorded, not inferred.
+cors:
+  enabled: true
+  expose_headers:
+  - X-WP-Total
+  - X-WP-TotalPages
+  - Link
+  allow_headers:
+  - Authorization
+  - X-WP-Nonce
+  - Content-Disposition
+  - Content-MD5
+  - Content-Type
+transport_security:
+  hsts: max-age=63072000; includeSubDomains; preload
+  x_content_type_options: nosniff
+  referrer_policy: strict-origin-when-cross-origin
+  artifact: security/brightseed-domain-security.yml
