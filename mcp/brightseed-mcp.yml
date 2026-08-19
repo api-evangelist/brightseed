@@ -5,9 +5,10 @@ source: openapi/ (11 specs derived from https://www.brightseedbio.com/wp-json/wp
 searched:
   date: '2026-07-31'
   result: none
-  note: No official or community MCP server for Brightseed was found in the docs, on the Brightseed GitHub org (github.com/Brightseed,
-    0 public repositories), or in the public MCP registries. The tools below are a CANDIDATE surface derived from
-    the anonymous read operations of the live WordPress REST API — Brightseed does not operate this server.
+  note: No official or community MCP server for Brightseed was found in the docs, on the Brightseed GitHub
+    org (github.com/Brightseed, 0 public repositories), or in the public MCP registries. The tools below
+    are a CANDIDATE surface derived from the anonymous read operations of the live WordPress REST API
+    — Brightseed does not operate this server.
 server:
   name: brightseed
   transport: http
@@ -53,3 +54,9 @@ tools:
   description: List published site authors.
   source_operation: openapi/brightseed-users-api-openapi.yml#listWpV2Users
   auth: anonymous
+deployment:
+  mode: none
+  verified: derived
+  tools: 10
+  checked: '2026-08-12'
+  source: catalog MCP census
