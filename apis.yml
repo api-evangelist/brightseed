@@ -32,6 +32,17 @@ tags:
 - Ingredients
 - Drug Discovery
 - Agrifood
+- content-api
+- WordPress
+tags_raw:
+- Company
+- Bioactives
+- Artificial Intelligence
+- Life Sciences
+- Nutrition
+- Ingredients
+- Drug Discovery
+- Agrifood
 - Content API
 - WordPress
 apis:
@@ -42,6 +53,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Posts
+  tags_raw:
   - posts
   properties:
   - type: OpenAPI
@@ -59,6 +72,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Pages
+  tags_raw:
   - pages
   properties:
   - type: OpenAPI
@@ -76,6 +91,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Media
+  tags_raw:
   - media
   properties:
   - type: OpenAPI
@@ -93,6 +110,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Categories
+  tags_raw:
   - categories
   properties:
   - type: OpenAPI
@@ -110,6 +129,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Tags
+  tags_raw:
   - tags
   properties:
   - type: OpenAPI
@@ -127,6 +148,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - User
+  tags_raw:
   - users
   properties:
   - type: OpenAPI
@@ -144,6 +167,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Comments
+  tags_raw:
   - comments
   properties:
   - type: OpenAPI
@@ -161,6 +186,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Search
+  tags_raw:
   - search
   properties:
   - type: OpenAPI
@@ -195,6 +222,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Types
+  tags_raw:
   - types
   properties:
   - type: OpenAPI
@@ -212,6 +241,8 @@ apis:
   humanURL: https://www.brightseedbio.com/wp-json/
   baseURL: https://www.brightseedbio.com/wp-json
   tags:
+  - Status
+  tags_raw:
   - statuses
   properties:
   - type: OpenAPI
