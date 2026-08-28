@@ -14,6 +14,18 @@ description: Brightseed is a bioactives and AI company founded in 2017 (San Fran
   pages, categories, tags, users, media, comments, search, taxonomies, types and statuses, plus authenticated write
   operations via WordPress application passwords. This profile was enriched by the API Evangelist pipeline from
   that live surface.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.brightseedbio.com/wp-content/uploads/2025/07/cropped-Logo-1-270x270.png
 url: https://raw.githubusercontent.com/api-evangelist/brightseed/refs/heads/main/apis.yml
 x-type: company
