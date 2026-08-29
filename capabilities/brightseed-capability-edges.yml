@@ -1,0 +1,36 @@
+slug: brightseed
+provider: Brightseed
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Healthcare Providers
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: pages
+  spec_file: brightseed-pages-api-openapi.yml
+  capability_id: BC-400
+  capability_id_l1: BC-400
+  capability_name: Marketing Management
+  confidence: 0.7
+  evidence: '"Public content API for the Brightseed corporate site (www.brightseedbio.com)"; GET/POST
+    /wp/v2/pages, GET /wp/v2/pages/{parent}/revisions'
+  reason: Authoring, revisioning and publishing of corporate website pages is marketing website content
+    management. Ambiguous between digital (web) marketing and content marketing sub-capabilities, so only
+    the L1 is asserted.
+- tag: posts
+  spec_file: brightseed-posts-api-openapi.yml
+  capability_id: BC-400.70
+  capability_id_l1: BC-400
+  capability_name: Content Marketing Management
+  confidence: 0.7
+  evidence: '"Public content API for the Brightseed corporate site"; POST /wp/v2/posts, GET /wp/v2/posts/{parent}/revisions'
+  reason: Editorial post creation, revision and publication on the company's public site is content marketing
+    production and distribution; the vendor's own description of the spec as the corporate site content
+    API grounds this.

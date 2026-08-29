@@ -271,6 +271,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: CapabilityMap
+  url: capabilities/brightseed-capability-edges.yml
+  name: Brightseed Business Capability Map
 - type: Authentication
   url: authentication/brightseed-authentication.yml
 - type: Conventions
