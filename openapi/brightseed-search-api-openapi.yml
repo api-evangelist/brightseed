@@ -1,13 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Brightseed Site Content API (WordPress REST API) search API
+  title: Brightseed Site Content API (WordPress REST API) Search API
   version: wp/v2
-  description: Public content API for the Brightseed corporate site (www.brightseedbio.com), served by
-    the WordPress REST API `wp/v2` namespace. Read operations on posts, pages, categories, tags, users,
-    media, comments, search, taxonomies, types and statuses were verified to respond anonymously on 2026-07-31;
-    write operations require authentication via WordPress application passwords. This document was derived
-    by the API Evangelist enrichment pipeline from the route metadata the server itself publishes at https://www.brightseedbio.com/wp-json/wp/v2
-    — no operations, parameters or schemas were invented.
+  description: Public content API for the Brightseed corporate site (www.brightseedbio.com), served by the WordPress REST API `wp/v2` namespace.
   contact:
     name: Brightseed
     url: https://www.brightseedbio.com/contact-us/
@@ -16,14 +11,14 @@ servers:
   description: Brightseed WordPress REST API
 security: []
 tags:
-- name: search
+- name: Search
 paths:
   /wp/v2/search:
     get:
       operationId: listWpV2Search
       summary: GET /wp/v2/search
       tags:
-      - search
+      - Search
       responses:
         '200':
           description: Successful response
@@ -145,5 +140,4 @@ components:
     applicationPassword:
       type: http
       scheme: basic
-      description: WordPress application passwords. Authorize at https://www.brightseedbio.com/wp-admin/authorize-application.php
-        (advertised in the /wp-json/ discovery document).
+      description: WordPress application passwords. Authorize at https://www.brightseedbio.com/wp-admin/authorize-application.php (advertised in the /wp-json/ discovery document).

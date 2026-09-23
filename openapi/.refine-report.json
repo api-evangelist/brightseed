@@ -1,0 +1,38 @@
+{
+  "provider": "brightseed",
+  "sources": [
+    "brightseed-categories-api-openapi.yml",
+    "brightseed-comments-api-openapi.yml",
+    "brightseed-media-api-openapi.yml",
+    "brightseed-pages-api-openapi.yml",
+    "brightseed-posts-api-openapi.yml",
+    "brightseed-search-api-openapi.yml",
+    "brightseed-statuses-api-openapi.yml",
+    "brightseed-tags-api-openapi.yml",
+    "brightseed-taxonomies-api-openapi.yml",
+    "brightseed-types-api-openapi.yml",
+    "brightseed-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "brightseed-categories-api-openapi.yml",
+    "brightseed-comments-api-openapi.yml",
+    "brightseed-media-api-openapi.yml",
+    "brightseed-pages-api-openapi.yml",
+    "brightseed-posts-api-openapi.yml",
+    "brightseed-search-api-openapi.yml",
+    "brightseed-statuses-api-openapi.yml",
+    "brightseed-tags-api-openapi.yml",
+    "brightseed-taxonomies-api-openapi.yml",
+    "brightseed-types-api-openapi.yml",
+    "brightseed-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [
+    "no openapi/_original/ archive: this run re-split PREVIOUSLY REFINED output, so any base URL it carries is inherited from an earlier pass rather than read from a document the provider published"
+  ],
+  "notes": [
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}

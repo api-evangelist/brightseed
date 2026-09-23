@@ -1,13 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Brightseed Site Content API (WordPress REST API) pages API
+  title: Brightseed Site Content API (WordPress REST API) Pages API
   version: wp/v2
-  description: Public content API for the Brightseed corporate site (www.brightseedbio.com), served by
-    the WordPress REST API `wp/v2` namespace. Read operations on posts, pages, categories, tags, users,
-    media, comments, search, taxonomies, types and statuses were verified to respond anonymously on 2026-07-31;
-    write operations require authentication via WordPress application passwords. This document was derived
-    by the API Evangelist enrichment pipeline from the route metadata the server itself publishes at https://www.brightseedbio.com/wp-json/wp/v2
-    — no operations, parameters or schemas were invented.
+  description: Public content API for the Brightseed corporate site (www.brightseedbio.com), served by the WordPress REST API `wp/v2` namespace.
   contact:
     name: Brightseed
     url: https://www.brightseedbio.com/contact-us/
@@ -16,14 +11,14 @@ servers:
   description: Brightseed WordPress REST API
 security: []
 tags:
-- name: pages
+- name: Pages
 paths:
   /wp/v2/pages:
     get:
       operationId: listWpV2Pages
       summary: GET /wp/v2/pages
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -244,7 +239,7 @@ paths:
       operationId: createWpV2Pages
       summary: POST /wp/v2/pages
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -351,7 +346,7 @@ paths:
       operationId: getWpV2PagesById
       summary: GET /wp/v2/pages/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -384,8 +379,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
       parameters:
-      - &id001
-        name: id
+      - name: id
         in: path
         required: true
         schema:
@@ -417,7 +411,7 @@ paths:
       operationId: createWpV2PagesById
       summary: POST /wp/v2/pages/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -467,7 +461,7 @@ paths:
                   description: An alphanumeric identifier for the post unique to its type.
                 status:
                   type: string
-                  enum: &id002
+                  enum:
                   - publish
                   - future
                   - draft
@@ -498,13 +492,13 @@ paths:
                   description: The ID of the featured media for the post.
                 comment_status:
                   type: string
-                  enum: &id003
+                  enum:
                   - open
                   - closed
                   description: Whether or not comments are open on the post.
                 ping_status:
                   type: string
-                  enum: &id004
+                  enum:
                   - open
                   - closed
                   description: Whether or not the post can be pinged.
@@ -518,14 +512,18 @@ paths:
                   type: string
                   description: The theme file to use to display the post.
       parameters:
-      - *id001
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       security:
       - applicationPassword: []
     put:
       operationId: replaceWpV2PagesById
       summary: PUT /wp/v2/pages/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -575,7 +573,13 @@ paths:
                   description: An alphanumeric identifier for the post unique to its type.
                 status:
                   type: string
-                  enum: *id002
+                  enum:
+                  - publish
+                  - future
+                  - draft
+                  - pending
+                  - private
+                  - acf-disabled
                   description: A named status for the post.
                 password:
                   type: string
@@ -600,11 +604,15 @@ paths:
                   description: The ID of the featured media for the post.
                 comment_status:
                   type: string
-                  enum: *id003
+                  enum:
+                  - open
+                  - closed
                   description: Whether or not comments are open on the post.
                 ping_status:
                   type: string
-                  enum: *id004
+                  enum:
+                  - open
+                  - closed
                   description: Whether or not the post can be pinged.
                 menu_order:
                   type: integer
@@ -616,14 +624,18 @@ paths:
                   type: string
                   description: The theme file to use to display the post.
       parameters:
-      - *id001
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       security:
       - applicationPassword: []
     patch:
       operationId: updateWpV2PagesById
       summary: PATCH /wp/v2/pages/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -673,7 +685,13 @@ paths:
                   description: An alphanumeric identifier for the post unique to its type.
                 status:
                   type: string
-                  enum: *id002
+                  enum:
+                  - publish
+                  - future
+                  - draft
+                  - pending
+                  - private
+                  - acf-disabled
                   description: A named status for the post.
                 password:
                   type: string
@@ -698,11 +716,15 @@ paths:
                   description: The ID of the featured media for the post.
                 comment_status:
                   type: string
-                  enum: *id003
+                  enum:
+                  - open
+                  - closed
                   description: Whether or not comments are open on the post.
                 ping_status:
                   type: string
-                  enum: *id004
+                  enum:
+                  - open
+                  - closed
                   description: Whether or not the post can be pinged.
                 menu_order:
                   type: integer
@@ -714,14 +736,18 @@ paths:
                   type: string
                   description: The theme file to use to display the post.
       parameters:
-      - *id001
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       security:
       - applicationPassword: []
     delete:
       operationId: deleteWpV2PagesById
       summary: DELETE /wp/v2/pages/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -754,7 +780,11 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
       parameters:
-      - *id001
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       - name: force
         in: query
         required: false
@@ -769,7 +799,7 @@ paths:
       operationId: getWpV2PagesByIdAutosaves
       summary: GET /wp/v2/pages/{id}/autosaves
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -802,8 +832,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
       parameters:
-      - &id005
-        name: id
+      - name: id
         in: path
         required: true
         schema:
@@ -829,7 +858,7 @@ paths:
       operationId: createWpV2PagesByIdAutosaves
       summary: POST /wp/v2/pages/{id}/autosaves
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -930,7 +959,11 @@ paths:
                   type: string
                   description: The theme file to use to display the post.
       parameters:
-      - *id005
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       security:
       - applicationPassword: []
   /wp/v2/pages/{parent}/autosaves/{id}:
@@ -938,7 +971,7 @@ paths:
       operationId: getWpV2PagesByParentAutosavesById
       summary: GET /wp/v2/pages/{parent}/autosaves/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -997,7 +1030,7 @@ paths:
       operationId: getWpV2PagesByParentRevisions
       summary: GET /wp/v2/pages/{parent}/revisions
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -1119,7 +1152,7 @@ paths:
       operationId: getWpV2PagesByParentRevisionsById
       summary: GET /wp/v2/pages/{parent}/revisions/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -1152,14 +1185,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
       parameters:
-      - &id006
-        name: parent
+      - name: parent
         in: path
         required: true
         schema:
           type: integer
-      - &id007
-        name: id
+      - name: id
         in: path
         required: true
         schema:
@@ -1179,7 +1210,7 @@ paths:
       operationId: deleteWpV2PagesByParentRevisionsById
       summary: DELETE /wp/v2/pages/{parent}/revisions/{id}
       tags:
-      - pages
+      - Pages
       responses:
         '200':
           description: Successful response
@@ -1212,8 +1243,16 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
       parameters:
-      - *id006
-      - *id007
+      - name: parent
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       - name: force
         in: query
         required: false
@@ -1244,5 +1283,4 @@ components:
     applicationPassword:
       type: http
       scheme: basic
-      description: WordPress application passwords. Authorize at https://www.brightseedbio.com/wp-admin/authorize-application.php
-        (advertised in the /wp-json/ discovery document).
+      description: WordPress application passwords. Authorize at https://www.brightseedbio.com/wp-admin/authorize-application.php (advertised in the /wp-json/ discovery document).
