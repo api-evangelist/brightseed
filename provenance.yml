@@ -12,72 +12,6 @@ artifacts:
   capabilities/brightseed-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
-  collections/brightseed-categories-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-categories-api
-  collections/brightseed-categories-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-categories-api
-  collections/brightseed-comments-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-comments-api
-  collections/brightseed-comments-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-comments-api
-  collections/brightseed-media-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-media-api
-  collections/brightseed-media-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-media-api
-  collections/brightseed-pages-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-pages-api
-  collections/brightseed-pages-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-pages-api
-  collections/brightseed-posts-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-posts-api
-  collections/brightseed-posts-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-posts-api
-  collections/brightseed-search-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-search-api
-  collections/brightseed-search-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-search-api
-  collections/brightseed-statuses-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-statuses-api
-  collections/brightseed-statuses-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-statuses-api
-  collections/brightseed-tags-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-tags-api
-  collections/brightseed-tags-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-tags-api
-  collections/brightseed-taxonomies-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-taxonomies-api
-  collections/brightseed-taxonomies-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-taxonomies-api
-  collections/brightseed-types-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-types-api
-  collections/brightseed-types-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-types-api
-  collections/brightseed-users-api.opencollection.json:
-    method: derived
-    evidence: openapi/brightseed-users-api
-  collections/brightseed-users-api.postman_collection.json:
-    method: derived
-    evidence: openapi/brightseed-users-api
   conformance/brightseed-conformance.yml:
     method: derived
     evidence: declared in the artifact
@@ -90,55 +24,10 @@ artifacts:
   errors/brightseed-problem-types.yml:
     method: derived
     evidence: declared in the artifact
-  kin/checks-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-06T210741.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-07T135032.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-10T093022.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-10T111628.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-11T211707.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-12T193225.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-17T064519.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T080027.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T082702.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T114122.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T165047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T191845.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T205517.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-21T110057.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-24T064859.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-24T171257.yml:
+  front-door-ai/2026-09-17.yml:
+    method: unknown
+    evidence: no authorship recorded
+  kin/checks-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-08-25T125852.yml:
@@ -225,6 +114,123 @@ artifacts:
   kin/score-2026-09-05T072335.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T144739.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T195450.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T211839.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T011047.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T211804.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T224210.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-07T200636.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-07T213054.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-08T214843.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-08T232836.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-10T204815.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-10T222408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T062655.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T080032.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T204651.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T221936.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-13T214537.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T064754.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T210656.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T225847.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-15T211329.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-15T230249.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-16T210549.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-16T225339.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-17T211151.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-17T233623.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-18T205255.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-18T231945.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-19T165737.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-19T193153.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-20T205903.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-20T232958.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-21T211425.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-21T233935.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-22T213221.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-23T000603.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T064009.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T090406.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T161608.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/brightseed-lifecycle.yml:
     method: derived
     evidence: declared in the artifact
@@ -233,72 +239,6 @@ artifacts:
     evidence: 'derive-llms-provenance.py: harvested'
   mcp/brightseed-mcp.yml:
     method: derived
-    evidence: declared in the artifact
-  openapi/brightseed-categories-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-comments-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-media-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-pages-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-posts-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-search-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-statuses-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-tags-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-taxonomies-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-types-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/brightseed-users-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  overlays/brightseed-categories-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-comments-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-media-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-pages-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-posts-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-search-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-statuses-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-tags-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-taxonomies-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-types-api-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
-  overlays/brightseed-users-api-overlay.yaml:
-    method: generated
     evidence: declared in the artifact
   security/brightseed-domain-security.yml:
     method: unknown
