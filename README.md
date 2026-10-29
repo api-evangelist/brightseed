@@ -64,40 +64,116 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Brightseed is a bioactives and AI company (founded 2017, San Francisco CA / Durham NC) whose Forager AI
-platform maps compounds in plants to human biological pathways and health benefits, drawing on a
-proprietary dataset of 21 million bioactive compounds across 23 health areas. Hummingbird layers an
-agentic AI system on top of Forager to carry partners from discovery through development.
+Brightseed is a bioactives and AI company founded in 2017 (San Francisco, CA, with operations in Durham, NC) that uses its Forager AI platform to map the compounds in plants to human biological pathways and health benefits. Forager draws on a proprietary dataset the company describes as the world's largest — 21 million bioactive compounds and hundreds of biological receptors spanning 23 health areas — combining high-resolution omics, high-throughput robotics and machine learning to predict which natural compounds confer a benefit and where to source them at commercial scale. Hummingbird, launched in 2026, layers an agentic AI system on top of Forager to carry partners from discovery through development. Brightseed sells discovery services (Bioactive Profiler, Bioactive Ingredient Finder) and market-ready ingredients (Bio Gut Fiber, Bio Meta Control, Bio Gut Core) to food, supplement and health-science companies. Brightseed publishes no product or developer API for Forager or Hummingbird — those are sold as enterprise engagements through a contact form. The single machine-readable surface the company operates is the WordPress REST API (wp/v2) behind its corporate site at www.brightseedbio.com, which exposes anonymous read access to posts, pages, categories, tags, users, media, comments, search, taxonomies, types and statuses, plus authenticated write operations via WordPress application passwords. This profile was enriched by the API Evangelist pipeline from that live surface.
 
-**Brightseed publishes no product or developer API.** Forager, Hummingbird, the Bioactive Profiler and
-the Bioactive Ingredient Finder are sold as enterprise engagements arranged through a contact form —
-there is no developer portal, no documentation host, no SDK, no `/.well-known/` discovery surface, no
-MCP server and no A2A agent card. The single machine-readable surface the company operates is the
-**WordPress REST API (`wp/v2`)** behind its corporate site at `www.brightseedbio.com`.
+**Areas:** Company · Bioactives · Artificial Intelligence · Life Sciences · Nutrition · Ingredients · Drug Discovery · Agrifood · content-api · WordPress
 
-## What is in this repo
+## Brightseed on APIs.io
 
-| Artifact | What it covers |
+Everything profiled for Brightseed is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/brightseed/](https://apis.io/providers/brightseed/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Brightseed Website (WordPress REST)](https://apis.io/apis/brightseed/brightseedbio-com-website-wordpress-rest/) — The public WordPress REST API (wp-json) of the Brightseed website at www.brightseedbio.com: the route index of the site's content management system,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [brightseed](https://apis.io/servers/brightseed/brightseed/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Brightseed Agentic Access](https://apis.io/agentic-access/brightseed/brightseed-agentic-access/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-categories-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-comments-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-media-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-pages-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-posts-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-search-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-statuses-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-tags-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-taxonomies-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-types-api/)
+- [Moved to /providers/brightseed/](https://apis.io/collections/brightseed/open-brightseed-users-api/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Brightseed Authentication](https://apis.io/security/brightseed/brightseed-authentication/)
+- [Brightseed Domain Security](https://apis.io/security/brightseed/brightseed-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.brightseedbio.com/)
+- [Blog](https://resources.brightseedbio.com/knowledgebase)
+- [Terms of service](https://www.brightseedbio.com/terms-of-use/)
+- [Privacy policy](https://www.brightseedbio.com/privacy-policy/)
+- [GitHub](https://github.com/Brightseed)
+
+## API Evangelist rating
+
+**Kin Score 17.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `openapi/` | 11 OpenAPI 3.1.0 documents, 84 operations, derived from the route metadata the server itself publishes at `https://www.brightseedbio.com/wp-json/wp/v2` |
-| `overlays/` | One OpenAPI Overlay 1.0.0 per spec carrying the API Evangelist annotations |
-| `authentication/` | HTTP Basic via WordPress application passwords |
-| `conventions/` | Pagination (`page`/`per_page`, `X-WP-Total`), sparse fields (`_fields`), embedding (`_embed`), error envelope, CORS — no idempotency contract, no rate-limit signalling |
-| `errors/` | The WordPress error envelope `{code, message, data.status}` (not RFC 9457) |
-| `data-model/` | Entity graph for posts, pages, media, terms, users and comments |
-| `lifecycle/` | `wp/v2` namespace versioning; no status page, deprecation policy, SLA or changelog |
-| `conformance/` | Standards asserted and denied, each with evidence |
-| `well-known/` | Observed absence — every `/.well-known/` path returns 404 on both hosts |
-| `security/` | TLS 1.3, HSTS preload, SPF, DMARC `p=reject`; no DNSSEC, no CAA, no security.txt, no VDP, no trust center |
-| `agentic-access/` | Recommended `x-agentic-access` contracts for all 84 operations |
-| `mcp/` | A **candidate** tool surface derived from the anonymous read operations — Brightseed operates no MCP server |
-| `skills/` | Two packaged agent skills grounded in real `operationId`s |
-| `llms/` | `llms.txt` generated from this catalog |
+| Discoverability | 65.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 25.6 |
+| Access clarity | 21.1 |
 
-Anonymous read access was verified on 2026-07-31 for posts, pages, media, categories, tags, users,
-comments, search, taxonomies, types and statuses. `settings`, `themes`, `plugins` and `menu-items`
-return 401.
+**Agent readiness 5.9** — agent-aware
 
-- https://www.brightseedbio.com/
-- https://www.brightseedbio.com/forager-ai/
-- https://forgeglobal.com/brightseed_stock/
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/brightseed/](https://apis.io/providers/brightseed/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Brightseed: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/brightseed/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
